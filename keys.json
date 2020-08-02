@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mini-guns-data-bot",
+  "private_key_id": "9ba0ca789754e597e15b99f6a1e4496d91fc5945",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCLPZpR4Xtm1e0I\nwPbeaZGbHHuAftY6JN7LKncan37gue/EKjqtZ+tt8lZPT5a834rayD180A725HrX\n3QQWjN41EytUpkyu5EGQkFqxs5LJrWkapewNAaXTPvYsOQ1HclWMdR9fZZWmHpUq\nYYFChtaf/Yo7GeuIFYi8EVNLIxZYVKjF/DV+ob7Yp3XkhsVt3Kucn6+oh79e8Sd8\nNwSf7Q4ZSz7z5dHRKgTTVJ1N95utEvzaGd19dQgWhrvIm/aX3sBq+0zmtas7VHpY\nV70AQssHpWPP09YXClcP7XIrKDTcSEn9pvXoFr93SYZ1p4gCl3f9XHLqszbet4Wu\n++UZcHsHAgMBAAECggEAANnVBhgTKXs4Mhv/xjct8R048f2UcJGGHQa66Jo968Cn\nIvNBHYsriKX4+g4Z9TiGgDTGD2u0E7UsvQH4Qu0EdJ2T37YOdOknL2t6amiXBo19\nPXDzItc2PLa/SWDl4GBl/nA+y1XzFqtMLRCgehgZ2qtxe0/6vP+osMGIWUazHcIQ\nYTvWWERZALi2H3hlGYF0F2XuMjFCCfolAhj7jF1KiKTncHxwXRBWVqyrkA7SECiz\nzMxTmecKTjOx6q1ZqCKc4BuPS+OA8ouCQdKfu7ayL0dU/GcU6MWeIc3EyDJW5MqL\nGs2kVkW9XsSg+b/mnowJbb+SXVw1DrUmn/ENTtj/bQKBgQC9ONIQq4Zdv8Exp0sq\naX6zqmNIg9wXqdw/XhGKFrr4tG4RhAT3Bm3CAch+9ugBZDS4iU/cHv1R9p+C//fH\nI7b7f53aGKcobAML/iVc0OeoIkYf5FK7KbwthbAHbapiuloa9QhuJcuRtvp0BLmi\nvaXBFSspTeM+9RLYyQxQ5kxDbQKBgQC8YT2W2vlURN4Obh7L+r6+1SNp8Oy0qSOe\nIqBufSdIQHghXMezzIZPmFVQsPF7nbZXz5bvAV+bwzgBQUebfO6NzqR2CKvb8oCJ\n8hVBm20ZUvwFINWZlRQObJSc8IzIx9fg1F3hnxasTtnxR8eglqmAErL5HeKO0YpB\ndAuLUKs7wwKBgBWd6ymqXsRRBsIkaYrj2GywF32OStONPTMkDP7oj92fxz9LBMIv\nwtQ6HeybSm/2QaufTDdKdwgpE5oEogrnAp2Cu8bRsC8G/+Yb16rd1sk3eSlljSoC\nn5PXxP9kQOXcgjS4L4ld2f7Al6YvcAGuhsQjJfYnBsIHf2qytSx80tOVAoGAZ7nL\nZeNQ4lvBQYTVJE/+86j8hPsJ+zgeypYabHwxQxFslEI4HAKD+hPQ9ktXzE889gDy\nBMxmzqehkN9XBIC4AhFEcVG4/7T5nftURPnGCumsp047DwQNNRwIgJnbizqu3bdR\nskgc/ee1DawOeZg74K9rKMyR0T4DuKKjMKTMhG0CgYEApxX2VFUrek2DZDT83J7l\ndLdVCZ0JnrEFJPYgmNMhCKPj07bL0B2fx25VRA70H4J/Vl6YpvAWdfk8Vh8orzD9\nOa8wr5BlUzjUhqEJP1GdIAO2m084zTnaBkY9x59t79/voxKlFE60hn3Tv0DCvacB\n/U4/LiXS791+qIhjcy1v/7Q=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service1@mini-guns-data-bot.iam.gserviceaccount.com",
+  "client_id": "107673465747406016281",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service1%40mini-guns-data-bot.iam.gserviceaccount.com"
+}
