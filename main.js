@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = "NzM4NTA2NTY4MTIzMDIzMzky.XyM51g.YsI2OQPW4BCbu-dwo5caoZtg4tQ"  // replace with process.env.token from heroku
-
+const token = process.env.token;
 
 var doc;
 
@@ -9,7 +8,7 @@ var doc;
 const { google } = require("googleapis");
 
 const spreadsheetId = "1WqogbXoOThLkt2kL3QJbFGT3Kc_x_XwwmK2FCJdrnvQ"; 
-const APIKey = "AIzaSyAEtB4JC7MOXojFuLvL0PqT7NrCM34M3r0";
+const APIKey = 'AIzaSyAEtB4JC7MOXojFuLvL0PqT7NrCM34M3r0';
 
 const sheets = google.sheets({version: "v4", auth: APIKey});
 sheets.spreadsheets.get({ spreadsheetId: spreadsheetId }, (err, res) => {
@@ -98,15 +97,21 @@ client.on("message", (message) => {
                   const miniDataEmbed = new Discord.MessageEmbed()
 
                   // change based on mini
+                  var ms = miniArray[j][i][10];
+                  var rs = miniArray[j][i][11];
 
-
+                  // salamander bike was missing it's move and run speed so this is hardcoded
+                  if(miniArray[j][i][0] === "Salamander Bike"){
+                    ms = "10 km/h";
+                    rs = "72 km/h";
+                  }
                   miniDataEmbed.addFields(
                     {name: 'AP cost: ', value: miniArray[j][i][8], inline: true},
                     {name: 'Type: ', value: miniArray[j][i][1], inline: true},
                     {name: 'HP: ', value: (parseInt(miniArray[j][i][21])+(miniArray[j][i][22]*(miniLvl-1))), inline: true},
                     {name: 'Upkeep: ', value: miniArray[j][i][9], inline: true},
-                    {name: 'Move Speed: ', value: miniArray[j][i][10], inline: true},
-                    {name: 'Run Speed: ', value: miniArray[j][i][11], inline: true},
+                    {name: 'Move Speed: ', value: ms, inline: true},
+                    {name: 'Run Speed: ', value: rs, inline: true},
                     {name: '\u200B', value: '\u200B' },
                     
                   );
