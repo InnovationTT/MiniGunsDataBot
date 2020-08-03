@@ -110,7 +110,7 @@ client.on("message", (message) => {
                     type = "Truck";
                     ms = "54 km/h";
                     rs = "---";
-                  } else if (miniArray[j][i][0] === "Laser Tank" && miniArray[j][i][0] === "Command Tank") {
+                  } else if (miniArray[j][i][0] === "Laser Tank" || miniArray[j][i][0] === "Command Tank") {
                     ap = '8';
                   }
                   miniDataEmbed.addFields(
