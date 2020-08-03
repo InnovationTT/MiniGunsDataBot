@@ -97,16 +97,22 @@ client.on("message", (message) => {
                   const miniDataEmbed = new Discord.MessageEmbed()
 
                   // change based on mini
+                  var ap = miniArray[j][i][8];
                   var ms = miniArray[j][i][10];
                   var rs = miniArray[j][i][11];
 
-                  // salamander bike was missing it's move and run speed so this is hardcoded
+                  // hardcoded mini values for missing spreadsheet values
                   if(miniArray[j][i][0] === "Salamander Bike"){
                     ms = "10 km/h";
                     rs = "72 km/h";
+                  } else if (miniArray[j][i][0] === "Avenger") {
+                    ms = "10 km/h";
+                    rs = "72 km/h";
+                  } else if (miniArray[j][i][0] === "Laser Tank" && miniArray[j][i][0] === "Command Tank") {
+                    ap = '8';
                   }
                   miniDataEmbed.addFields(
-                    {name: 'AP cost: ', value: miniArray[j][i][8], inline: true},
+                    {name: 'AP cost: ', value: ap, inline: true},
                     {name: 'Type: ', value: miniArray[j][i][1], inline: true},
                     {name: 'HP: ', value: (parseInt(miniArray[j][i][21])+(miniArray[j][i][22]*(miniLvl-1))), inline: true},
                     {name: 'Upkeep: ', value: miniArray[j][i][9], inline: true},
