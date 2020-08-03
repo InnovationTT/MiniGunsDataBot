@@ -88,9 +88,15 @@ client.on("message", (message) => {
             
             // find mini
             var found = false;
+            var lvlError = false;
             for(var j = 0; j < 3; j++){
               for(var i = 0; i < miniArray[j].length; i++){
                 if(miniArray[j][i][0].toLowerCase() === miniName){
+                  //check if level too high
+                  if(miniLvl > miniArray[j][i][4] || miniLvl < 1){
+                    lvlError = true;
+                    break;
+                  }
                   //set found to true
                   found = true;
                   //create embed
@@ -186,6 +192,10 @@ client.on("message", (message) => {
 
             if(!found){
               message.channel.send("Error: Mini not found. Please check your spelling. If you think this is a bug please dm my creator!");
+            }
+
+            if(lvlError) {
+              message.channel.send("Error: Impossible mini level. If you think this is a bug please dm my creator!");
             }
 
           }
