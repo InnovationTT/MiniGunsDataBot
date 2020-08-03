@@ -11,6 +11,8 @@ const spreadsheetId = "1WqogbXoOThLkt2kL3QJbFGT3Kc_x_XwwmK2FCJdrnvQ";
 const APIKey = 'AIzaSyAEtB4JC7MOXojFuLvL0PqT7NrCM34M3r0';
 
 const sheets = google.sheets({version: "v4", auth: APIKey});
+
+/*
 sheets.spreadsheets.get({ spreadsheetId: spreadsheetId }, (err, res) => {
   if (err) {
     console.error(err);
@@ -36,14 +38,14 @@ sheets.spreadsheets.get({ spreadsheetId: spreadsheetId }, (err, res) => {
   );
 });
 
-
+*/
 
 
 
 
 var lastUpdate = "2020/07/30";
 var prefix = "!mg";
-
+var miniArray;
 
 // Discord Bot part
 client.login(token);
@@ -83,7 +85,7 @@ client.on("message", (message) => {
             let empData = await sheets.spreadsheets.values.get(opt);
             let empDataArray = empData.data.values;
 
-            var miniArray = [repDataArray, domDataArray, empDataArray];
+            miniArray = [repDataArray, domDataArray, empDataArray];
             //console.log(repDataArray[1][5]);
             
             // find mini
@@ -205,6 +207,10 @@ client.on("message", (message) => {
           gsrun();
         }
 
+        // list all minis
+        else if (command.startsWith("list")){
+
+        }
         //message.channel.send("command:"+command);
     } 
     
