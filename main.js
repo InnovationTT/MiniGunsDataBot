@@ -92,13 +92,15 @@ client.on("message", (message) => {
             for(var j = 0; j < 3; j++){
               for(var i = 0; i < miniArray[j].length; i++){
                 if(miniArray[j][i][0].toLowerCase() === miniName){
+                  //set found to true
+                  found = true;
+                  
                   //check if level too high
                   if(miniLvl > miniArray[j][i][4] || miniLvl < 1){
                     lvlError = true;
                     break;
                   }
-                  //set found to true
-                  found = true;
+                  
                   //create embed
                   const miniDataEmbed = new Discord.MessageEmbed()
 
