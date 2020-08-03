@@ -94,7 +94,7 @@ client.on("message", (message) => {
                 if(miniArray[j][i][0].toLowerCase() === miniName){
                   //set found to true
                   found = true;
-
+                  console.log(parseInt(miniArray[j][i][4]));
                   //check if level too high
                   if(miniLvl > parseInt(miniArray[j][i][4]) || miniLvl < 1){
                     lvlError = true;
