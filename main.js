@@ -122,7 +122,7 @@ client.on("message", (message) => {
                     
                   );
 
-                  // catch empty cells
+                  // catch empty cells for target prio
                   for (var k = 0; k < 8; k++){
                     if(miniArray[j][i][44+i] === "")
                       miniArray[j][i][44+i] === "---";
