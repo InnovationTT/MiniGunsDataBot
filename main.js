@@ -106,8 +106,8 @@ client.on("message", (message) => {
                     ms = "10 km/h";
                     rs = "72 km/h";
                   } else if (miniArray[j][i][0] === "Avenger") {
-                    ms = "10 km/h";
-                    rs = "72 km/h";
+                    ms = "54 km/h";
+                    rs = "---";
                   } else if (miniArray[j][i][0] === "Laser Tank" && miniArray[j][i][0] === "Command Tank") {
                     ap = '8';
                   }
@@ -121,6 +121,14 @@ client.on("message", (message) => {
                     {name: '\u200B', value: '\u200B' },
                     
                   );
+
+                  // catch empty cells
+                  for (var k = 0; k < 8; k++){
+                    if(miniArray[j][i][44+i] === "")
+                      miniArray[j][i][44+i] === "---";
+                    if(miniArray[j][i][36+i] === "")
+                      miniArray[j][i][36+i] === "---";  
+                  }
                   
                   // DMG Type 1
                   if (miniArray[j][i][25] !== "---"){
