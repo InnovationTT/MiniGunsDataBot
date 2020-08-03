@@ -209,8 +209,27 @@ client.on("message", (message) => {
 
         // list all minis
         else if (command.startsWith("list")){
+          const miniListEmbed = new Discord.MessageEmbed();
+          var list = "";
+          var faction = "";
 
+          for(var i = 0; i < 3; i++){
+            if(i === 0)
+              faction = "Republic";
+            else if (i === 1)
+              faction = "Dominion";
+            else 
+              faction = "Empire";
+
+            for(var j = 0; j < miniArray[i].length; j++){
+              list = list.concat(miniArray[i][j][0], '\n');
+            }
+            miniListEmbed.addField(faction, list, false);
+          }
+          message.channel.send({ embed: miniListEmbed });
         }
+
+
         //message.channel.send("command:"+command);
     } 
     
