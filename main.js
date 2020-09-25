@@ -58,11 +58,13 @@ client.on("message", (message) => {
     // if bot command prefix is in front
     if (message.content.startsWith(prefix)){
         var command = message.content.slice(prefix.length+1);
+        /*
         if(command.match("hi")){
             message.channel.send("hello");
         }
+        */
         // lookup minis
-        else if (command.startsWith("lookup")){
+        if (command.startsWith("lookup")){
           var miniLvl = command.replace( /^\D+/g, '');
           var miniName = command.slice(7).toLowerCase().replace(/[0-9]/g, '').replace(/\s+$/, '');;
           
@@ -96,7 +98,7 @@ client.on("message", (message) => {
                 if(miniArray[j][i][0].toLowerCase() === miniName){
                   //set found to true
                   found = true;
-                  console.log(miniArray[j][i][5]);
+
                   //check if level too high
                   if(miniLvl > parseInt(miniArray[j][i][5]) || miniLvl < 1){
                     lvlError = true;
